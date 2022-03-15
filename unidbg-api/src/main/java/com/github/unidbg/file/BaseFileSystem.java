@@ -22,7 +22,7 @@ public abstract class BaseFileSystem<T extends NewFileIO> implements FileSystem<
     public BaseFileSystem(Emulator<T> emulator, File rootDir) {
         this.emulator = emulator;
         this.rootDir = rootDir;
-
+        System.out.println("rootDir: " + rootDir);
         try {
             initialize(this.rootDir);
         } catch (IOException e) {

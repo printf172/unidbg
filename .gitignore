@@ -1,6 +1,8 @@
 /*.iml
 /.idea/
 /unidbg-android/src/test/resources/unpack/*_unpacked.so
+/unidbg-android/src/test/resources/*/*.apk
+/unidbg-android/src/test/resources/*/*.so
 /target/
 *.DS_Store
 **/dev/log

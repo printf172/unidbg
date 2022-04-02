@@ -12,12 +12,15 @@ import com.github.unidbg.linux.android.dvm.*;
 import com.github.unidbg.linux.android.dvm.array.ArrayObject;
 import com.github.unidbg.linux.android.dvm.array.ByteArray;
 import com.github.unidbg.linux.android.dvm.wrapper.DvmInteger;
+import com.github.unidbg.linux.file.DirectoryFileIO;
 import com.github.unidbg.linux.file.SimpleFileIO;
 import com.github.unidbg.memory.Memory;
+import org.apache.commons.io.IOUtils;
 
 import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class NBridge extends AbstractJni implements IOResolver {
@@ -44,6 +47,7 @@ public class NBridge extends AbstractJni implements IOResolver {
     }
 
     public static void main(String[] args) {
+
         NBridge test = new NBridge();
         test.main111();
         test.main203();
@@ -147,5 +151,7 @@ public class NBridge extends AbstractJni implements IOResolver {
         }
         return null;
     }
+
+
 }
 

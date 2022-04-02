@@ -31,7 +31,7 @@ public class JniDispatchSougou extends AbstractJni {
     private final VM vm;
     private final Module module;
 
-    public String apkPath = "/Users/jiewang/Downloads/StudyNotes/Reverse/sougou-7.9.6.6.apk";
+    public String apkPath = "/Users/jiewang/IdeaProjects/printf172/unidbg/unidbg-android/src/test/resources/sougou/sougou-7.9.6.6.apk";
     public String soPath = "unidbg-android/src/test/resources/sougou/libSCoreTools-7.9.6.6.so";
 
     private static LibraryResolver createLibraryResolver() {

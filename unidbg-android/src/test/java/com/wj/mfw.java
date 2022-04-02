@@ -138,7 +138,7 @@ public class mfw extends AbstractJni{
 
     public static void main(String[] args) throws Exception {
         mfw test = new mfw();
-//        test.hook_312E0();
+        test.hook_312E0();
 //        test.hook_3151C();
         test.hook_315B0();
         System.out.println(test.xPreAuthencode());

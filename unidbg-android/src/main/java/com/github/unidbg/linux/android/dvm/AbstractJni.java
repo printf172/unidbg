@@ -368,6 +368,8 @@ public abstract class AbstractJni implements Jni {
             case "java/util/Set->iterator()Ljava/util/Iterator;":
                 Set<?> set = (Set<?>) dvmObject.getValue();
                 return vm.resolveClass("java/util/Iterator").newObject(set.iterator());
+            case "com/ss/android/ugc/aweme/app/host/HostApplication->getApplicationInfo()Landroid/content/pm/ApplicationInfo;":
+                return new ApplicationInfo(vm);
         }
 
         throw new UnsupportedOperationException(signature);

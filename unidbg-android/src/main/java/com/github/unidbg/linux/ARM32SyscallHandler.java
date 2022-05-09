@@ -1582,7 +1582,8 @@ public class ARM32SyscallHandler extends AndroidSyscallHandler {
                         return fd;
                     case SocketIO.SOCK_RAW:
                     default:
-                        throw new UnsupportedOperationException();
+                        return -1; //摆烂
+//                        throw new UnsupportedOperationException();
                 }
         }
         log.info("socket domain=" + domain + ", type=" + type + ", protocol=" + protocol);

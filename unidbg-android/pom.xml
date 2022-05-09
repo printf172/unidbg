@@ -46,5 +46,21 @@
             <version>0.9.7-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.android.support/appcompat-v7 -->
+        <!-- https://mvnrepository.com/artifact/com.google.android/android -->
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>4.1.1.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.5.5</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 </project>

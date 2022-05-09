@@ -137,8 +137,10 @@ public class NetLinkSocket extends SocketIO implements FileIO {
                 throw new IllegalStateException(e);
             }
         }
-        throw new UnsupportedOperationException("buffer=" + buffer + ", count=" + count + ", netlinkType=0x" + Integer.toHexString(netlinkType));
+        return -1;//摆烂
+//        throw new UnsupportedOperationException("buffer=" + buffer + ", count=" + count + ", netlinkType=0x" + Integer.toHexString(netlinkType));
     }
+
 
     @Override
     protected int getTcpNoDelay() {

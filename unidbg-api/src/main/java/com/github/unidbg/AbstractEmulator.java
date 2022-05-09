@@ -103,9 +103,13 @@ public abstract class AbstractEmulator<T extends NewFileIO> implements Emulator<
         this.pid = Integer.parseInt(pid) & 0x7fff;
 
         this.svcMemory = new ARMSvcMemory(svcBase, svcSize, this);
-        this.threadDispatcher = new UniThreadDispatcher(this);
+        this.threadDispatcher = createThreadDispatcher();
 
         this.backend.onInitialize();
+    }
+
+    protected ThreadDispatcher createThreadDispatcher() {
+        return new UniThreadDispatcher(this);
     }
 
     @Override
@@ -474,6 +478,10 @@ public abstract class AbstractEmulator<T extends NewFileIO> implements Emulator<
 
     protected void searchClass(String keywords) {
         throw new UnsupportedOperationException("searchClass keywords=" + keywords);
+    }
+
+    protected void dumpGPBProtobufMsg(String className) {
+        throw new UnsupportedOperationException("dumpGPBProtobufMsg className=" + className);
     }
 
     @Override
